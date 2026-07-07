@@ -62,7 +62,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
           )
         }
         {
-          profiles.map(({ network, url, username }) => {
+          profiles.filter(({ network }) => network !== 'GitHub' && network !== 'X').map(({ network, url, username }) => {
             const Icon = SOCIAL_ICONS[network]
 
             return (
