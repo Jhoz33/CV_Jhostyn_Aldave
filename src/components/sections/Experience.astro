@@ -33,7 +33,7 @@ import { work } from "@cv";
                     datetime={endDate}
                     data-title={endDate}
                   >
-                    {endDate ? `${new Date(endDate).toLocaleString('es-ES', { month: 'long' }).slice(0,3)} {new Date(endDate).getFullYear()}` : 'Actual'}
+                    {endDate ? `${new Date(endDate).toLocaleString('es-ES', { month: 'long' }).slice(0,3)} ${new Date(endDate).getFullYear()}` : 'Actual'}
                   </time>
                 </div>
               </header>
