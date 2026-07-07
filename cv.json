@@ -12,13 +12,23 @@
       "postalCode": "",
       "city": "Lima",
       "countryCode": "ES",
-      "region": "Peru"
+      "region": "Perú"
     },
     "profiles": [
       {
         "network": "LinkedIn",
         "username": "Jhostyn Aldave",
         "url": "https://www.linkedin.com/in/jhostyn-aldave-322655265/"
+      },
+      {
+        "network": "X",
+        "username": "midudev",
+        "url": ""
+      },
+      {
+        "network": "GitHub",
+        "username": "midudev",
+        "url": ""
       }
     ]
   },
@@ -26,6 +36,7 @@
     {
       "name": "LAIVE",
       "position": "Analista de Datos",
+      "url": "",
       "startDate": "2025-01-06",
       "endDate": null,
       "summary": "Streamer de programación más visto en Español en Twitch. +1 millón de seguidores entre todas mis redes sociales. Reconocido por Google, Microsoft y GitHub por mi impacto en la comunidad de desarrolladores.",
@@ -36,6 +47,7 @@
     {
       "name": "DINERS CLUB PERU",
       "position": "Analista de Inteligencia de Negocios",
+      "url": "",
       "startDate": "2024-03-04",
       "endDate": "2024-12-31",
       "summary": "Lideré una convergencia técnica entre diferentes productos y migramos una arquitectura monolítica a otra más flexible y optimizada. Fomenté buenas prácticas y mejoras en la cultura de rendimiento, además de la entrega rápida de valor a los usuarios.",
@@ -46,7 +58,7 @@
     {
       "name": "UNACEM PERU",
       "position": "Practicante de Data Analytics",
-      "startDate": "2023-05-01",
+      "startDate": "2023-05-02",
       "endDate": "2024-01-12",
       "summary": "Desarrollé una plataforma de noticias geolocalizadas y una API para consumir la información. Escalé los servicios para soportar la carga de más de cientos de miles de peticiones al día. Recorté los tiempos de entrega y despliegues a producción a la mitad. Colaboré con Mozilla y Telefónica para desarrollar la primera app para televisores con FirefoxOS.",
       "highlights": [
@@ -54,8 +66,20 @@
       ]
     }
   ],
+  "volunteer": [{
+    "organization": "Organization",
+    "position": "Volunteer",
+    "url": "https://organization.com/",
+    "startDate": "2012-01-01",
+    "endDate": "2013-01-01",
+    "summary": "Description…",
+    "highlights": [
+      "Awarded 'Volunteer of the Month'"
+    ]
+  }],
   "education": [{
     "institution": "Universidad Nacional de Ingeniería (UNI)",
+    "url": "",
     "area": "Ingeniero Industrial",
     "studyType": "Bachelor",
     "startDate": "2015-08-24",
