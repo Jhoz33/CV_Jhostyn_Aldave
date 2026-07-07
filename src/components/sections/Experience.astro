@@ -1,53 +1,49 @@
 ---
-import Section from "../Section.astro"
+import Section from "../Section.astro";
 
-import { work } from "@cv"
+import { work } from "@cv";
 ---
 
 <Section title="Experiencia laboral">
   <ul>
     {
       work.map(
-        ({ name, startDate, endDate, position, summary, highlights, url }) => {
-          const startYear = new Date(startDate).getFullYear()
-          const endYear =
-            endDate != null ? new Date(endDate).getFullYear() : "Actual"
+        ({ name, startDate, endDate, position, summary, highlights, url }) => (
+          <li>
+            <article>
+              <header>
+                <div>
+                  <h3>
+                    <a href={url} title={`Ver ${name}`} target="_blank">
+                      {name}
+                    </a>
+                  </h3>
+                  <h4>{position}</h4>
+                </div>
 
-          return (
-            <li>
-              <article>
-                <header>
-                  <div>
-                    <h3>
-                      <a href={url} title={`Ver ${name}`} target="_blank">
-                        {name}
-                      </a>
-                    </h3>
-                    <h4>{position}</h4>
-                  </div>
+                <div>
+                  <time 
+                    datetime={startDate}
+                    data-title={startDate}
+                  >
+                    {new Date(startDate).toLocaleString('es-ES', { month: 'long', year: 'numeric' })}
+                  </time>
+                  {" - "}
+                  <time 
+                    datetime={endDate}
+                    data-title={endDate}
+                  >
+                    {endDate ? new Date(endDate).toLocaleString('es-ES', { month: 'long', year: 'numeric' }) : 'Actual'}
+                  </time>
+                </div>
+              </header>
 
-                  <div>
-                    <time 
-                      datetime={startDate}
-                      data-title={startDate}>
-                        {new Date(startDate).toLocaleString('es-ES', { month: 'long', year: 'numeric' })}
-                    </time>
-                    {" - "}
-                    <time 
-                      datetime={endDate}
-                      data-title={endDate}>
-                        {new Date(endDate).toLocaleString('es-ES', { month: 'long', year: 'numeric' })}
-                    </time>
-                  </div>
-                </header>
-
-                <footer>
-                  <p>{summary}</p>
-                </footer>
-              </article>
-            </li>
-          )
-        }
+              <footer>
+                <p>{summary}</p>
+              </footer>
+            </article>
+          </li>
+        )
       )
     }
   </ul>
@@ -59,45 +55,37 @@ import { work } from "@cv"
     flex-direction: column;
     gap: 32px;
   }
-
   article h3 {
     font-weight: 500;
     color: #111;
   }
-
   article a {
     color: #111;
   }
-
   article a:hover {
     text-decoration: underline;
   }
-
   article h4 {
     color: #222;
     font-weight: 400;
   }
-
   header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 4px;
   }
-
   time {
     color: #555;
     font-size: 0.85rem;
     min-width: 102px;
     cursor: default;
   }
-
   [data-title]:hover:after {
     opacity: 1;
     transition: all 0.1s ease-in-out 0.5s;
     visibility: visible;
   }
-
   [data-title]:after {
     content: attr(data-title);
     background-color: #333;
@@ -113,14 +101,11 @@ import { work } from "@cv"
     opacity: 0;
     border: 1px solid #111111;
     z-index: 99999;
-    visibility: hidden;
     border-radius: 6px;
   }
-
   [data-title] {
     position: relative;
   }
-
   @media (width <= 700px) {
     time {
       text-align: right;
